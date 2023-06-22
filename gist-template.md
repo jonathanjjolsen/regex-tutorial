@@ -29,7 +29,7 @@ Anchors are utilized to signify the beginning and end of where the validation sh
 ### Bracket Expressions
 
 ### Quantifiers
-Quantifiers are used to ensure that one or more of the specifications listed before it are satisfied. In our example a `+` sign is used. `([a-zA-Z0-9._%-]+` Uppon closer inspection we can identify that the requirement is at least one lowercase, uppercase, number, or predetermined symbol is required before the `@` in order to be considered valid. If we use the example, `john.doe@gmail.com` the quantifier would be satisfied because there is at least one of the aformentioned characters used before the `@` symbol.
+Quantifiers are used to ensure that one or more of the patterns listed before it are satisfied. The first example of this is the use of the `+` sign. `([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+` Uppon closer inspection we can identify that the requirement is at least one lowercase, uppercase, number, or predetermined symbol before and after the `@` in order to be considered valid. If we use the example, `john.doe@gmail.com` the quantifier would be satisfied because there is at least one of the aformentioned characters used before and after the `@` symbol. The second use of a quatifier in this example comes toward the end of the expression in the form of `{2,6}`. This piece of the regex sets a minimum and maximum number of times for the pattern to be repeated. If we reuse the fake email from earlier, it is clear that the email would pass this inspection. `.com` would fall between the parameters being that it is exactly 3 characters long following the `.`.
 
 ### Grouping Constructs
 
