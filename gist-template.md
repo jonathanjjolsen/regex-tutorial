@@ -8,14 +8,14 @@ Briefly summarize the regex you will be describing and what you will explain. In
 <br/>
 As mentioned above, this document is going to outline the use and functionality of an email validation regular expression. These are crafted in order to verify that a user has entered the correct format of the email. It checks for things such as an "@" symbol or a "." near the end. The different sections of this document will disect the different components that go into the creation of a regex and how they all function. Below is an example of a basic email validation regex that we will be using throughout the rest of this tutorial.<br/>
 <br/>
-`/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/`
+`/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$/`
 
 ## Table of Contents
 
 - [Anchors](#anchors)
+- [Bracket Expressions](#bracket-expressions)
 - [Quantifiers](#quantifiers)
 - [Grouping Constructs](#grouping-constructs)
-- [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
@@ -24,13 +24,15 @@ As mentioned above, this document is going to outline the use and functionality 
 ## Regex Components
 
 ### Anchors
-Anchors are utilized to signify the beginning and end of where the validation should occur within the entered information. In this example: `/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/` we can see that there are two anchors held within. The first is the `^` symbol. This is called a caret and identifies that the regex should start checking for validity at the beginning of the entered info. The second symbol used is the `$`. Using a dollar sign lets the script know that we want it to check at the end of the entered information. When taking a closer look at the expression, one should identify that the caret is used at the beginning and the dollar sign is used at the end. This means that all of the entered email is going to be validated.
+Anchors are utilized to signify the beginning and end of where the validation should occur within the entered information. In this example: `/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$/` we can see that there are two anchors held within. The first is the `^` symbol. This is called a caret and identifies that the regex should start checking for validity at the beginning of the entered info. The second symbol used is the `$`. Using a dollar sign lets the script know that we want it to check at the end of the entered information. When taking a closer look at the expression, one should identify that the caret is used at the beginning and the dollar sign is used at the end. This means that all of the entered email is going to be validated.
+
+### Bracket Expressions
 
 ### Quantifiers
+Quantifiers are used to ensure that one or more of the specifications listed before it are satisfied. In our example a `+` sign is used. `([a-zA-Z0-9._%-]+` Uppon closer inspection we can identify that the requirement is at least one lowercase, uppercase, number, or predetermined symbol is required before the `@` in order to be considered valid. If we use the example, `john.doe@gmail.com` the quantifier would be satisfied because there is at least one of the aformentioned characters used before the `@` symbol.
 
 ### Grouping Constructs
 
-### Bracket Expressions
 
 ### Character Classes
 
