@@ -48,11 +48,11 @@ The previously mentioned character classes play a crucial role in the operation 
 <br/>`0-9`: Numbers
 <br/>`._%-`: Additional Characters
 
-### The OR Operator
-
-### Flags
-
 ### Character Escapes
+A character escape is called using backslash when the regex should interperet the following symbol as a literal character rather than its specialized operation. This might be a little tricky to understand so lets dive deeper into the example.<br/>
+<br/>`/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$/`<br/>
+
+Because we have a `\` in front of the `.`, it is calling for a literal period to be in that position. This is the "." in ".com". If the `\` was not there, the default special use for a period is any character except for a newline.
 
 ## Author
 
