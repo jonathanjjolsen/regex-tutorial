@@ -4,8 +4,6 @@ Most people living in the 21st century have an email. Its almost impossible to b
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.<br/>
-<br/>
 As mentioned above, this document is going to outline the use and functionality of an email validation regular expression. These are crafted in order to verify that a user has entered the correct format of the email. It checks for things such as an "@" symbol or a "." near the end. The different sections of this document will disect the different components that go into the creation of a regex and how they all function. Below is an example of a basic email validation regex that we will be using throughout the rest of this tutorial.<br/>
 <br/>
 `/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})$/`
@@ -55,5 +53,8 @@ A character escape is called using backslash when the regex should interperet th
 Because we have a `\` in front of the `.`, it is calling for a literal period to be in that position. This is the "." in ".com". If the `\` was not there, the default special use for a period is any character except for a newline.
 
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+### Jonathan Olsen
+This tutorial was a prompt for a school assingment. If you have any questions, you can reach me directly at: <br/>
+<br/>jonathanjolsen@gmail.com<br/>
+<br/>Or message me directly on github.<br/>
+<br/>GitHub: https://github.com/jonathanjjolsen
